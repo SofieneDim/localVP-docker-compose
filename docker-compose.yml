@@ -1,13 +1,13 @@
-version: '3'
+version: "3"
 #docker run -t -d -p 7755:8545 -p 9818:30303 --name public-node styfan/geth-ubuntu
 
 services:
-    publicNode:
-        container_name: public-node
-        restart: always
-        image: styfan/geth-ubuntu
-        ports: 
-            - '7755:8545'
-            - '9818:30303'
-        volumes:
-            - /Volumes/Storage/Trimakus/docker/docker-compose/localChain:/home/chaindir
+  publicNode:
+    container_name: public-node
+    restart: always
+    image: styfan/geth-ubuntu
+    ports:
+      - "8545:8545"
+      - "9818:30303"
+    volumes:
+      - /Volumes/Storage/Trimakus/docker/docker-compose/localChain:/home/chaindir
